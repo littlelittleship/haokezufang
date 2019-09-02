@@ -1,21 +1,7 @@
-/* .home_nav{
-    background: #fff;
-    display: flex;
-}
-.nav_item{
-    flex: 1;
-    padding:15px;
-    text-align: center;
-    color:#666;
-    font-size: 14;
-}
-.nav_item img{
-    width: 80%;
-    margin: 0 auto;
-} */
 
 .home_nav{
     display: flex;
+    background: #fff;
     .nav_item{
     flex: 1;
     padding:15px;
@@ -26,9 +12,109 @@
         width: 80%;
     margin: 0 auto;
     }
-
     p {
 
     }
   }
+}
+
+.homeGroups {
+    background: #f6f5f6;
+    padding:10px;
+  .homeGroups_title {
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 10px;
+    span {
+        &:nth-child(2){
+            font-size: 13px;
+            color:#666;
+            font-weight: normal;
+        }
+    }
+  }
+
+  .homeGroups_cont {
+      background: #fff;
+      display: flex;
+      flex-wrap: wrap;
+    .cont_item {
+        flex: 50%;
+        display: flex;
+        border: 5px solid #f6f5f6;
+        padding: 10px;
+      .item_desc{
+          flex: 1;
+          padding-top: 10px;
+        p {
+            font-size: 14px;
+            &:nth-child(2){
+                color:#666;
+                font-size: 12px;
+            }
+        }   
+      }
+      .item_img{
+        flex: 1;
+        img {
+            width:80%;
+            margin:0 auto;
+        }
+      }
+    }
+  }
+}
+
+.home_news {
+    background-color: #fff;
+    padding: 10px;
+    .home_news_title {
+      padding: 10px 0;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .home_news_content {
+      .news_item {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 0;
+        &:last-child{
+          border-bottom:   none;
+        }
+        .news_item_img {
+          flex: 2;
+          padding: 5px;
+          img {
+            border-radius: 5px;
+          }
+        }
+
+        .news_item_info {
+          flex: 3;
+          padding-left: 5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          .news_item_name {
+            font-weight: 600;
+          }
+
+          .news_item_des {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            .news_item_from {
+            }
+
+            .news_item_date {
+            }
+          }
+        }
+      }
+    }
 }
