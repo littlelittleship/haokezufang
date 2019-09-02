@@ -10,6 +10,9 @@ import { REACT_APP_API_URL } from '../../utils/urls'
 // import style from './index.module.css'
 import style from './index.module.scss'
 
+// 导入搜索组件
+import SearchInput from "../../components/SearchInput";
+
 // 引入图片
 import nav1 from "../../assets/images/nav-1.png";
 import nav2 from "../../assets/images/nav-2.png";
@@ -54,7 +57,10 @@ class index extends Component {
     return (
       <div className="hk_home">
         {/* 轮播图 开始 */}
-        <div className="home_swiper">
+        <div className={style.home_swiper}>
+          <div className={style.home_search_input}>
+            <SearchInput />
+          </div>
           {swiperList.length&& <Carousel
             autoplay
             infinite
