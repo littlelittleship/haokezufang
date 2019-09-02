@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 // import axios from "axios";
-import { Carousel, WingBlank } from 'antd-mobile';
+import { Carousel } from 'antd-mobile';
 import { axios } from '../../utils/request.js'
+
+// 使用开发环境中的变量,可以不用.js
+import { REACT_APP_API_URL } from '../../utils/urls'
 
 class index extends Component {
   state = {
@@ -9,9 +12,11 @@ class index extends Component {
     imgHeight: 176
   }
   componentDidMount() {
+    
     axios.get("/home/swiper")
       .then(res => {
         // this.setState({ swiperList: res.data.body });
+        console.log(REACT_APP_API_URL);
         this.setState({ swiperList: res.body });
       })
   }
